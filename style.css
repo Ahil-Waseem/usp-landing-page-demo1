@@ -1731,7 +1731,8 @@ figure.snip1157 .author h5 span {
   max-width: 1000px;
   padding: 50px 64px 64px;
   border-radius: 32px;
-  background: linear-gradient(180deg, #eef3ff 0%, #ffffff 85%);
+  background: linear-gradient(180deg, #e6e6e6 0%, #f2f2f2 50%, #ffffff 100%);
+  /* background: linear-gradient(180deg, #eef3ff 0%, #ffffff 85%); */
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.06);
   transform: translateY(120px);
   opacity: 2;

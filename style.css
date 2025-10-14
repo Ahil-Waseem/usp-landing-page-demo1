@@ -782,6 +782,11 @@ section.video video{
 .video {
   margin-top: 50px;
 }
+.video_title{
+text-align: center;
+font-size: 36px;
+margin-bottom: 20px;
+}
 .video-wrapper {
   /* margin-top: 50px; */
   overflow: hidden;
@@ -1498,7 +1503,7 @@ figure.snip1157 .author h5 span {
         }
 
         .section-title h2 {
-            font-size: 48px;
+            font-size: 36px;
             font-weight: 700;
             color: #1a1a1a;
             margin-bottom: 15px;
@@ -2221,7 +2226,7 @@ figure.snip1157 .author h5 span {
   .hero p {
     font-size: 14px;
   }
-   .hero h1 {
+   /* .hero h1 {
     font-size: 16px;
-  }
+  } */
 }

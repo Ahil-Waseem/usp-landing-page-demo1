@@ -108,175 +108,6 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   alert("Form submitted! This is a demo - connect it to your backend.");
 });
 
-// Slider CARD Script Start
-const carousel = document.getElementById("carousel");
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("nextBtn");
-const dotsContainer = document.getElementById("dots");
-const cards = document.querySelectorAll(".outcome-card");
-
-let currentIndex = 0;
-const cardWidth = 630;
-
-// Create dots
-cards.forEach((_, index) => {
-  const dot = document.createElement("div");
-  dot.classList.add("dot");
-  if (index === 0) dot.classList.add("active");
-  dot.addEventListener("click", () => scrollToCard(index));
-  dotsContainer.appendChild(dot);
-});
-
-const dots = document.querySelectorAll(".dot");
-
-function updateDots() {
-  dots.forEach((dot, index) => {
-    dot.classList.toggle("active", index === currentIndex);
-  });
-}
-
-function updateButtons() {
-  prevBtn.disabled = currentIndex === 0;
-  nextBtn.disabled = currentIndex === cards.length - 1;
-}
-
-function scrollToCard(index) {
-  currentIndex = index;
-  carousel.scrollTo({
-    left: cardWidth * index,
-    behavior: "smooth",
-  });
-  updateDots();
-  updateButtons();
-}
-
-prevBtn.addEventListener("click", () => {
-  if (currentIndex > 0) {
-    scrollToCard(currentIndex - 1);
-  }
-});
-
-nextBtn.addEventListener("click", () => {
-  if (currentIndex < cards.length - 1) {
-    scrollToCard(currentIndex + 1);
-  }
-});
-
-// Update current index on scroll
-let scrollTimeout;
-carousel.addEventListener("scroll", () => {
-  clearTimeout(scrollTimeout);
-  scrollTimeout = setTimeout(() => {
-    const scrollLeft = carousel.scrollLeft;
-    const newIndex = Math.round(scrollLeft / cardWidth);
-    if (newIndex !== currentIndex) {
-      currentIndex = newIndex;
-      updateDots();
-      updateButtons();
-    }
-  }, 100);
-});
-
-// Touch swipe support
-let startX = 0;
-let scrollLeft = 0;
-let isDragging = false;
-
-carousel.addEventListener("touchstart", (e) => {
-  startX = e.touches[0].pageX;
-  scrollLeft = carousel.scrollLeft;
-  isDragging = true;
-});
-
-carousel.addEventListener("touchmove", (e) => {
-  if (!isDragging) return;
-  const x = e.touches[0].pageX;
-  const walk = (startX - x) * 2;
-  carousel.scrollLeft = scrollLeft + walk;
-});
-
-carousel.addEventListener("touchend", () => {
-  isDragging = false;
-});
-
-// Mouse drag support
-carousel.addEventListener("mousedown", (e) => {
-  startX = e.pageX;
-  scrollLeft = carousel.scrollLeft;
-  isDragging = true;
-  carousel.style.cursor = "grabbing";
-});
-
-carousel.addEventListener("mousemove", (e) => {
-  if (!isDragging) return;
-  e.preventDefault();
-  const x = e.pageX;
-  const walk = (startX - x) * 2;
-  carousel.scrollLeft = scrollLeft + walk;
-});
-
-carousel.addEventListener("mouseup", () => {
-  isDragging = false;
-  carousel.style.cursor = "grab";
-});
-
-carousel.addEventListener("mouseleave", () => {
-  isDragging = false;
-  carousel.style.cursor = "grab";
-});
-
-// Initial button state
-updateButtons();
-carousel.style.cursor = "grab";
-
-// Section: Sliding Section Script
-// const stickyContainer = document.getElementById("stickyContainer");
-// const cards2 = document.querySelectorAll(".diff-card");
-
-// let currentCard = 0;
-// const totalCards = cards2.length;
-
-// function updateCards() {
-//   const containerTop = stickyContainer.getBoundingClientRect().top;
-//   const containerHeight = stickyContainer.offsetHeight;
-//   const scrollProgress = -containerTop / (containerHeight - window.innerHeight);
-
-// Determine which card should be active based on scroll position
-//   let newCard = Math.floor(scrollProgress * totalCards);
-//   newCard = Math.max(0, Math.min(newCard, totalCards - 1));
-
-//   if (newCard !== currentCard) {
-//     currentCard = newCard;
-
-//     cards2.forEach((card, index) => {
-//       card.classList.remove("active", "prev", "next");
-
-//       if (index === currentCard) {
-//         card.classList.add("active");
-//       } else if (index < currentCard) {
-//         card.classList.add("prev");
-//       } else {
-//         card.classList.add("next");
-//       }
-//     });
-//   }
-// }
-
-// Throttle scroll event for better performance
-// let ticking = false;
-// window.addEventListener("scroll", () => {
-//   if (!ticking) {
-//     window.requestAnimationFrame(() => {
-//       updateCards();
-//       ticking = false;
-//     });
-//     ticking = true;
-//   }
-// });
-
-// Initial call
-// updateCards();
-
 // Footer: Accordion
 function toggleAccordion(header) {
   const item = header.parentElement;
@@ -295,21 +126,6 @@ function toggleAccordion(header) {
 
 // Testiminial Script
 
-// Scroll arrows
-const slider = document.getElementById("testimonialSlider");
-document.getElementById("slideLeft").onclick = () => {
-  slider.scrollBy({ left: -400, behavior: "smooth" });
-};
-document.getElementById("slideRight").onclick = () => {
-  slider.scrollBy({ left: 400, behavior: "smooth" });
-};
-
-// Generate initials automatically
-document.querySelectorAll(".avatar-initial").forEach((el) => {
-  const name = el.getAttribute("data-name") || "";
-  const first = name.trim().charAt(0).toUpperCase();
-  el.textContent = first;
-});
 // WHO WE ARE SECTION SCRIPT START
 // Toggle card on mobile tap
 function toggleCard(card) {
@@ -355,3 +171,45 @@ gsap.utils.toArray(".card-scroll").forEach((card) => {
   });
 });
 // SCROLL SECTION END
+
+// ========================================
+// ALTERNATIVE: If buttons still don't work, use this simpler version
+// ========================================
+// Wait for page to fully load
+window.addEventListener("load", function () {
+  // TESTIMONIAL
+  const testimonialSlider = document.getElementById("testimonialSlider");
+  const slideLeft = document.getElementById("slideLeft");
+  const slideRight = document.getElementById("slideRight");
+
+  if (slideLeft) {
+    slideLeft.onclick = function () {
+      testimonialSlider.scrollLeft -= 400;
+    };
+  }
+
+  if (slideRight) {
+    slideRight.onclick = function () {
+      testimonialSlider.scrollLeft += 400;
+    };
+  }
+
+  // EXPERTISE
+  const expertisePrev = document.getElementById("expertise-prev");
+  const expertiseNext = document.getElementById("expertise-next");
+  const expertiseContent = document.querySelector(".expertise-card-content");
+
+  if (expertisePrev) {
+    expertisePrev.onclick = function () {
+      const amount = window.innerWidth > 768 ? 500 : 300;
+      expertiseContent.scrollLeft -= amount;
+    };
+  }
+
+  if (expertiseNext) {
+    expertiseNext.onclick = function () {
+      const amount = window.innerWidth > 768 ? 500 : 300;
+      expertiseContent.scrollLeft += amount;
+    };
+  }
+});

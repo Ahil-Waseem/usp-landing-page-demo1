@@ -229,7 +229,7 @@ nav ul.dropdown-content {
   margin-top: 40px;
   margin-bottom: 15px;
 }
-.hero h1 span {
+.growth {
   color: #af0300;
 }
 
@@ -251,14 +251,16 @@ nav ul.dropdown-content {
   /* border: none; */
 }
 
-/* .hero .round-r {
+.hero .round-r {
   font-family: 'roundhand', sans-serif !important;
-  font-size: 56px;
-} */
+  font-size: 84px;
+color: #af0300;
+
+} 
 
 /* .hero-btn:hover {
   background-color: #e0e0e0;
-} */
+}
 
 .recognized {
   display: flex;
@@ -272,8 +274,8 @@ nav ul.dropdown-content {
   font-size: 16px;
   color: #fff;
   text-transform: capitalize;
-  /* margin-top: 20px; */
-}
+  
+} */
 .heading2 {
   font-size: 48px;
   color: #fff !important;
@@ -1560,19 +1562,19 @@ main h1 {
 
 /* Per-card stop offsets + stacking order (headings stay visible) */
 .card-scroll.c0 {
-  --offset: 0px;
+  --offset: 105px;
   z-index: 3;
 }
 .card-scroll.c1 {
-  --offset: 105px;
+  --offset: 205px;
   z-index: 4;
 } /* parks below section heading */
 .card-scroll.c2 {
-  --offset: 205px;
+  --offset: 305px;
   z-index: 4;
 } /* parks below card 1 heading */
 .card-scroll.c3 {
-  --offset: 300px;
+  --offset: 405px;
   z-index: 6;
 } /* parks below card 2 heading */
 
@@ -1630,7 +1632,7 @@ main h1 {
   .card-scroll h3 {
     font-size: 24px;
   }
-  .card-scroll.c0 {
+  /* .card-scroll.c0 {
     --offset: -10px;
   }
   .card-scroll.c1 {
@@ -1641,7 +1643,19 @@ main h1 {
   }
   .card-scroll.c3 {
     --offset: 305px;
+  } */
+     /* .card-scroll.c0 {
+    --offset: 80px;
   }
+  .card-scroll.c1 {
+    --offset: 175px;
+  }
+  .card-scroll.c2 {
+    --offset: 270px;
+  }
+  .card-scroll.c3 {
+    --offset: 310px;
+  } */
 }
 /* SCROLL SECTION CSS END */
 

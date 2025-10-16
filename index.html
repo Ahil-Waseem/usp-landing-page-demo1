@@ -33,10 +33,17 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
+<!-- Owl Carousel CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+/>
     <!-- <link rel="stylesheet" type="text/css" href="css/style.css" /> -->
     <link rel="stylesheet" href="/style.css" />
-   
   </head>
   <body>
     <!-- Navbar -->
@@ -72,9 +79,9 @@
         <li><a href="#pricing">Pricing</a></li>
       </ul>
 
-      <button class="nav-btn">
+      <button class="nav-btn phone-icon">
+        <i class="fa-solid fa-phone" style="color: #fff"></i>
         Get In Touch
-        <i class="fa-solid fa-arrow-right" style="color: #060606"></i>
       </button>
 
       <div class="menu-toggle" id="menuToggle">
@@ -86,7 +93,6 @@
 
     <!-- Hero Section -->
     <section class="hero">
-    
       <!-- <h1>
         Your Strategic <span>Growth</span><br /><span class="heading2"
           >Partener in businesses</span
@@ -95,49 +101,51 @@
       <h1>
         Your St<span class="round-r">ra</span>tegic
         <span class="growth">Growth</span><br /><span class="heading2"
-          >Partener in businesses</span
+          >Partner in business</span
         >
       </h1>
       <p>Marketing & Branding Solutions for<br />Growth Focused Business</p>
-      <button class="hero-btn">
-        Call Now <i class="fa-solid fa-phone-volume" style="color: #fff"></i>
-      </button>
+      <a href = 'tel:+91 9833022443' class="hero-btn phone-icon">
+        <i class="fa-solid fa-phone" style="color: #fff"></i> Call Now
+      </a>
       <div class="partner"><h1>Recognized By</h1></div>
 
       <div class="recognized">
         <!-- <img src="/assets/images/MNS.png" alt="Google Partner" /> -->
-        <img src="/assets/images/tGlobal.png" alt="YourStory" />
-        <img src="/assets/images/Ojaldevelopers.webp" alt="BTVi" />
-        <img src="/assets/images/Sundeck Solar.webp" alt="Entrepreneur India" />
-        <img src="/assets/images/casa-logo.png" alt="Meta" />
+        <img src="/assets/images/meta-img.png" alt="YourStory" />
+        <img src="/assets/images/google-img.png" alt="BTVi" />
+        <img src="/assets/images/whatsapp-img.png" alt="Entrepreneur India" />
+        <img src="/assets/images/bombaytimes-img.png" alt="Meta" />
       </div>
 
       <div class="glow-container">
-  <div class="ball"></div>
-  <div class="ball" style="--delay:-12s;--size:0.35;--speed:25s;"></div>
-  <div class="ball" style="--delay:-10s;--size:0.3;--speed:15s;"></div>
-  
-</div>
+        <div class="ball"></div>
+        <div
+          class="ball"
+          style="--delay: -12s; --size: 0.35; --speed: 25s"
+        ></div>
+        <div
+          class="ball"
+          style="--delay: -10s; --size: 0.3; --speed: 15s"
+        ></div>
+      </div>
     </section>
 
     <!-- <section class="video">
         <video src="assets/video/showreel-720p.mp4"></video>
       </section> -->
     <section class="video">
-      
       <h1 class="video_title">
         From Vision to Velocity - We Close the GAP<br />Between Ambition and
         Achievement.
       </h1>
       <div class="video-wrapper">
-        
         <video
           src="assets/video/showreel-720p.mp4"
           autoplay
           muted
           controls
         ></video>
-        
       </div>
     </section>
 
@@ -353,11 +361,7 @@
       <div class="cards-grid">
         <!-- Startups Card -->
         <div class="work-card" onclick="toggleCard(this)">
-          <img
-            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80"
-            alt="Startups"
-            class="card-image"
-          />
+          <img src="assets/images/img2.png" alt="Startups" class="card-image" />
           <div class="card-content">
             <h3 class="card-title">Startups</h3>
           </div>
@@ -370,7 +374,7 @@
         <!-- Family Business Card -->
         <div class="work-card" onclick="toggleCard(this)">
           <img
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80"
+            src="assets/images/img1.jpg"
             alt="Family Business"
             class="card-image"
           />
@@ -386,7 +390,7 @@
         <!-- Enterprises Card -->
         <div class="work-card" onclick="toggleCard(this)">
           <img
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80"
+            src="assets/images/img3.jpg"
             alt="Enterprises"
             class="card-image"
           />
@@ -401,13 +405,13 @@
       </div>
 
       <!-- Book a Call Button -->
-      <div class="cta-container">
-        <button class="book-call-btn">
+      <div class="cta-container2">
+        <a  href="#contact-form" class="book-call-btn">
           <span class="phone-icon"
-            ><i class="fa-solid fa-phone-volume" style="color: #fff"></i
+            ><i class="fa-solid fa-phone" style="color: #fff"></i
           ></span>
           Book Strategy Call
-        </button>
+        </a>
       </div>
     </section>
 
@@ -504,7 +508,7 @@
             <i class="las la-angle-left"></i>
           </button>
 
-          <div class="expertise-card-content">
+          <div class="expertise-card-content owl-carousel">
             <!-- Card 1 -->
             <div class="expertise-card">
               <div class="expertise-card-icon">
@@ -1045,7 +1049,7 @@
       </div>
     </section>
 
-    <div class="container">
+    <div class="container" id="contact-form">
       <div class="left-section">
         <h1>Let's Work Together</h1>
         <div class="contact-info">
@@ -1080,7 +1084,7 @@
         </div>
       </div>
 
-      <div class="form-section">
+      <div class="form-section" >
         <form id="contactForm">
           <div class="form-row">
             <div class="form-group">
@@ -1116,55 +1120,7 @@
             </div>
           </div>
 
-          <!-- <div class="form-row">
-            <div class="form-group">
-              <label
-                >How are you currently managing your social media
-                marketing?*</label
-              >
-              <select required>
-                <option value="" disabled selected>Select</option>
-                <option value="in-house">In-house team</option>
-                <option value="agency">Through an agency</option>
-                <option value="freelancer">Freelancer</option>
-                <option value="none">Not managing currently</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label
-                >How much are you currently investing in social media
-                marketing?*</label
-              >
-              <select required>
-                <option value="" disabled selected>Select</option>
-                <option value="0-5k">$0 - $5,000</option>
-                <option value="5k-10k">$5,000 - $10,000</option>
-                <option value="10k-25k">$10,000 - $25,000</option>
-                <option value="25k+">$25,000+</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label
-                >How urgently are you looking to start our engagement?*</label
-              >
-              <select required>
-                <option value="" disabled selected>Select</option>
-                <option value="immediate">Immediately</option>
-                <option value="1-month">Within 1 month</option>
-                <option value="1-3-months">1-3 months</option>
-                <option value="3-months+">3+ months</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label>City*</label>
-              <input type="text" placeholder="Enter city" required />
-            </div>
-          </div>  -->
-
-          <div class="form-group">
+          <div class="form-group" >
             <label>Service*</label>
             <select required>
               <option value="" disabled selected>Select</option>
@@ -1192,19 +1148,12 @@
               messages.</label
             >
           </div>
-
-          <button type="submit" class="submit-btn">
-            <svg
-              fill="white"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"
-              />
-            </svg>
-            Book a Call
-          </button>
+          <div class="form-btn">
+            <button type="submit" class="submit-btn book-call-btn">
+              <i class="fa-solid fa-phone"></i>
+              Book a Call
+            </button>
+          </div>
         </form>
       </div>
     </div>
@@ -1257,19 +1206,27 @@
 
           <!-- Resources Column -->
           <div class="footer-col">
-             <div class="newsletter">
+            <div class="newsletter">
               <h1><strong>Subscribe</strong> to our newsletter</h1>
               <form action="">
-                <input class="placeholder"
+                <input
+                  class="placeholder"
                   type="email"
                   name="email"
                   id="email"
                   required
                   placeholder="example@gmail.com"
                 />
-                <button class="subscribe" type="submit" name="submit"  value="Subscribe">Subscribe</button>
+                <button
+                  class="subscribe"
+                  type="submit"
+                  name="submit"
+                  value="Subscribe"
+                >
+                  Subscribe
+                </button>
               </form>
-            </div>  
+            </div>
             <!-- <h3>Resources</h3>
             <ul>
               <li><a href="#">Case Studies</a></li>
@@ -1321,13 +1278,21 @@
               <h1><strong>Subscribe</strong> to our newsletter</h1>
               <form action="">
                 <input
-                class="placeholder"
+                  class="placeholder"
                   type="email"
                   name="email"
                   id="email"
+                  required
                   placeholder="example@gmail.com"
-                /><br/>
-                <button class="subscribe" type="submit" name="submit" value="Subscribe" >Subscribe</button>
+                /><br />
+                <button
+                  class="subscribe"
+                  type="submit"
+                  name="submit"
+                  value="Subscribe"
+                >
+                  Subscribe
+                </button>
               </form>
             </div>
             <!-- <div class="accordion-content">
@@ -1406,61 +1371,94 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
+    <!-- jQuery (required by Owl Carousel) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
       console.clear();
-const randomX = random(-400, 400);
-const randomY = random(-200, 200);
-const randomDelay = random(0, 50);
-const randomTime = random(6, 12);
-const randomTime2 = random(5, 6);
-const randomAngle = random(-30, 150);
+      const randomX = random(-400, 400);
+      const randomY = random(-200, 200);
+      const randomDelay = random(0, 50);
+      const randomTime = random(6, 12);
+      const randomTime2 = random(5, 6);
+      const randomAngle = random(-30, 150);
 
-const blurs = gsap.utils.toArray(".blur");
-blurs.forEach((blur) => {
-  gsap.set(blur, {
-    x: randomX(-1),
-    y: randomX(1),
-    rotation: randomAngle(-1)
-  });
+      const blurs = gsap.utils.toArray(".blur");
+      blurs.forEach((blur) => {
+        gsap.set(blur, {
+          x: randomX(-1),
+          y: randomX(1),
+          rotation: randomAngle(-1),
+        });
 
-  moveX(blur, 1);
-  moveY(blur, -1);
-  rotate(blur, 1);
-});
+        moveX(blur, 1);
+        moveY(blur, -1);
+        rotate(blur, 1);
+      });
 
-function rotate(target, direction) {
-  gsap.to(target, randomTime2(), {
-    rotation: randomAngle(direction),
-    // delay: randomDelay(),
-    ease: Sine.easeInOut,
-    onComplete: rotate,
-    onCompleteParams: [target, direction * -1]
-  });
-}
+      function rotate(target, direction) {
+        gsap.to(target, randomTime2(), {
+          rotation: randomAngle(direction),
+          // delay: randomDelay(),
+          ease: Sine.easeInOut,
+          onComplete: rotate,
+          onCompleteParams: [target, direction * -1],
+        });
+      }
 
-function moveX(target, direction) {
-  gsap.to(target, randomTime(), {
-    x: randomX(direction),
-    ease: Sine.easeInOut,
-    onComplete: moveX,
-    onCompleteParams: [target, direction * -1]
-  });
-}
+      function moveX(target, direction) {
+        gsap.to(target, randomTime(), {
+          x: randomX(direction),
+          ease: Sine.easeInOut,
+          onComplete: moveX,
+          onCompleteParams: [target, direction * -1],
+        });
+      }
 
-function moveY(target, direction) {
-  gsap.to(target, randomTime(), {
-    y: randomY(direction),
-    ease: Sine.easeInOut,
-    onComplete: moveY,
-    onCompleteParams: [target, direction * -1]
-  });
-}
+      function moveY(target, direction) {
+        gsap.to(target, randomTime(), {
+          y: randomY(direction),
+          ease: Sine.easeInOut,
+          onComplete: moveY,
+          onCompleteParams: [target, direction * -1],
+        });
+      }
 
-function random(min, max) {
-  const delta = max - min;
-  return (direction = 1) => (min + delta * Math.random()) * direction;
-}
-
+      function random(min, max) {
+        const delta = max - min;
+        return (direction = 1) => (min + delta * Math.random()) * direction;
+      }
     </script>
+    <script>
+  $(document).ready(function () {
+    $(".expertise-card-content").owlCarousel({
+      loop: true,
+      margin: 20,
+      nav: false, // we'll use your custom buttons
+      dots: false,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      autoplayHoverPause: true,
+      responsive: {
+        0: { items: 1 },
+        700: { items: 2 },
+        1000: { items: 3 },
+        1400: { items: 3 }
+      }
+    });
+
+    // Custom navigation buttons
+    const owl = $(".expertise-card-content");
+    $("#expertise-next").click(function () {
+      owl.trigger("next.owl.carousel");
+    });
+    $("#expertise-prev").click(function () {
+      owl.trigger("prev.owl.carousel");
+    });
+  });
+</script>
+
   </body>
 </html>

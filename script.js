@@ -13,15 +13,15 @@ window.addEventListener("scroll", () => {
   if (window.scrollY > 10) {
     navbar.classList.add("scrolled");
     logoImg.src = logoDefault;
-    navBtn.style.backgroundColor = "#060606";
+    navBtn.style.backgroundColor = "#af0300";
     navBtn.style.color = "#fff";
     navBtn.querySelector("i").style.color = "#fff";
   } else {
     navbar.classList.remove("scrolled");
     logoImg.src = logoScrolled;
-    navBtn.style.backgroundColor = "#fff";
-    navBtn.style.color = "#060606";
-    navBtn.querySelector("i").style.color = "#060606";
+    navBtn.style.backgroundColor = "#af0300";
+    navBtn.style.color = "#fff";
+    navBtn.querySelector("i").style.color = "#fff";
   }
 });
 
@@ -193,23 +193,29 @@ window.addEventListener("load", function () {
       testimonialSlider.scrollLeft += 400;
     };
   }
-
-  // EXPERTISE
-  const expertisePrev = document.getElementById("expertise-prev");
-  const expertiseNext = document.getElementById("expertise-next");
-  const expertiseContent = document.querySelector(".expertise-card-content");
-
-  if (expertisePrev) {
-    expertisePrev.onclick = function () {
-      const amount = window.innerWidth > 768 ? 500 : 300;
-      expertiseContent.scrollLeft -= amount;
-    };
-  }
-
-  if (expertiseNext) {
-    expertiseNext.onclick = function () {
-      const amount = window.innerWidth > 768 ? 500 : 300;
-      expertiseContent.scrollLeft += amount;
-    };
-  }
 });
+  // EXPERTISE
+//   const expertisePrev = document.getElementById("expertise-prev");
+//   const expertiseNext = document.getElementById("expertise-next");
+//   const expertiseContent = document.querySelector(".expertise-card-content");
+
+//   if (expertisePrev) {
+//     expertisePrev.onclick = function () {
+//       const amount = window.innerWidth > 768 ? 500 : 300;
+//       expertiseContent.scrollLeft -= amount;
+//     };
+//   }
+
+//   if (expertiseNext) {
+//     expertiseNext.onclick = function () {
+//       const amount = window.innerWidth > 768 ? 500 : 300;
+//       expertiseContent.scrollLeft += amount;
+//     };
+//   }
+// });
+
+
+  // document.getElementById('callButton').addEventListener('click', function() {
+  //   // Example: call dialer or open modal with contact info
+  //   window.location.href = 'tel:+91 9833022443';
+  // });

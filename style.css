@@ -440,8 +440,8 @@ color: #af0300;
 
 .dropdown-content a {
   color: #fff;
-  padding: 12px 16px;
-  text-decoration: none;
+  padding: 12px 0px;
+  text-decoration: none;  
   font-size: 15px;
   display: block;
   transition: all 0.3s ease;
@@ -578,14 +578,8 @@ select {
   border-bottom: 1px solid #d8d8d8;
 }
 
-input:focus,
-select:focus {
-  outline: none;
-  border-color: #0047ff;
-}
-
 input::placeholder {
-  color: #fff;
+  color: #626262;
 }
 
 select {
@@ -1939,6 +1933,9 @@ color: #fff;
 margin-top: 12px;
 border-radius: 20px;
 max-width: 220px;
+}
+.newsletter input::placeholder{
+  color: #fff;
 }
 button.subscribe{
 margin-top: 10px;

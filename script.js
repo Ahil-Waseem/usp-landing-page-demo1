@@ -140,36 +140,36 @@ function toggleCard(card) {
 gsap.registerPlugin(ScrollTrigger);
 
 // Fade/slide each card until it reaches its sticky "park" offset
-gsap.utils.toArray(".card-scroll").forEach((card) => {
-  gsap.to(card, {
-    scrollTrigger: {
-      trigger: card,
-      start: "top 90%", // when card enters viewport
-      end: "top var(--offset)", // until it reaches its sticky top
-      scrub: 1.2,
-    },
-    y: 0,
-    opacity: 1,
-    ease: "power2.out",
-    duration: 1,
-  });
-});
+// gsap.utils.toArray(".card-scroll").forEach((card) => {
+//   gsap.to(card, {
+//     scrollTrigger: {
+//       trigger: card,
+//       start: "top 90%", // when card enters viewport
+//       end: "top var(--offset)", // until it reaches its sticky top
+//       scrub: 1.2,
+//     },
+//     y: 0,
+//     opacity: 1,
+//     ease: "power2.out",
+//     duration: 1,
+//   });
+// });
 
 // Optional subtle parallax for inner content
-gsap.utils.toArray(".card-scroll").forEach((card) => {
-  const content = card.querySelectorAll("h3, p");
-  gsap.from(content, {
-    scrollTrigger: {
-      trigger: card,
-      start: "top 85%",
-      end: "top calc(var(--offset) + 40px)",
-      scrub: 1,
-    },
-    y: 20,
-    opacity: 0.7,
-    stagger: 0.08,
-  });
-});
+// gsap.utils.toArray(".card-scroll").forEach((card) => {
+//   const content = card.querySelectorAll("h3, p");
+//   gsap.from(content, {
+//     scrollTrigger: {
+//       trigger: card,
+//       start: "top 85%",
+//       end: "top calc(var(--offset) + 40px)",
+//       scrub: 1,
+//     },
+//     y: 20,
+//     opacity: 0.7,
+//     stagger: 0.08,
+//   });
+// });
 // SCROLL SECTION END
 
 // ========================================

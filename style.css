@@ -332,10 +332,10 @@ nav ul.dropdown-content {
 }
 
 .hero h1 {
-  font-size: 72px;
+  font-size: 70px;
   font-weight: 700;
   margin-top: 40px;
-  line-height: 92px;
+  line-height: 80px;
   /* margin-bottom: 15px; */
   letter-spacing: -1;
   z-index: 5;
@@ -1624,19 +1624,23 @@ main h1 {
 
 /* Per-card stop offsets + stacking order (headings stay visible) */
 .card-scroll.c0 {
-  --offset: 105px;
+  /* --offset: 105px; */
+  --offset: 10px;
   z-index: 3;
 }
 .card-scroll.c1 {
-  --offset: 205px;
+  /* --offset: 205px; */
+  --offset: 110px;
   z-index: 4;
 } /* parks below section heading */
 .card-scroll.c2 {
-  --offset: 305px;
+  /* --offset: 305px; */
+  --offset: 210px;
   z-index: 4;
 } /* parks below card 1 heading */
 .card-scroll.c3 {
-  --offset: 405px;
+  /* --offset: 405px; */
+  --offset: 310px;
   z-index: 6;
 } /* parks below card 2 heading */
 
@@ -2011,6 +2015,9 @@ button.subscribe:hover {
   .work-card {
     height: 400px;
   }
+  .hero p {
+    margin-top: 20px;
+  }
 }
 @media (max-width: 968px) {
   .container {
@@ -2090,7 +2097,9 @@ button.subscribe:hover {
   .hero p {
     font-size: 16px;
   }
-
+.hero h1 {
+  font-size: 60px;
+}
   .hero {
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
@@ -2322,6 +2331,9 @@ button.subscribe:hover {
 
   .work-card.active {
     border-radius: 20px;
+  }
+  .heading2 {
+    font-size: 60px;
   }
 }
 

@@ -33,15 +33,15 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-<!-- Owl Carousel CSS -->
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-/>
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-/>
+    <!-- Owl Carousel CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
     <!-- <link rel="stylesheet" type="text/css" href="css/style.css" /> -->
     <link rel="stylesheet" href="/style.css" />
   </head>
@@ -105,7 +105,7 @@
         >
       </h1>
       <p>Marketing & Branding Solutions for<br />Growth Focused Business</p>
-      <a href = 'tel:+91 9833022443' class="hero-btn phone-icon">
+      <a href="tel:+91 9833022443" class="hero-btn phone-icon">
         <i class="fa-solid fa-phone" style="color: #fff"></i> Call Now
       </a>
       <div class="partner"><h1>Recognized By</h1></div>
@@ -406,7 +406,7 @@
 
       <!-- Book a Call Button -->
       <div class="cta-container2">
-        <a  href="#contact-form" class="book-call-btn">
+        <a href="#contact-form" class="book-call-btn">
           <span class="phone-icon"
             ><i class="fa-solid fa-phone" style="color: #fff"></i
           ></span>
@@ -1084,17 +1084,27 @@
         </div>
       </div>
 
-      <div class="form-section" >
-        <form id="contactForm">
+      <!-- <div class="form-section">
+        <form
+          id="contactForm"
+          action="https://script.google.com/macros/s/AKfycbxwdQOdADinLPYMp-UF_yiA-iWhogDBCLwRPF1AZ184wpBFRvX4eHk7W9H539rxxugZ/exec"
+          method="post"
+        >
           <div class="form-row">
             <div class="form-group">
               <label>Name*</label>
-              <input type="text" placeholder="Enter your full name" required />
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter your full name"
+                required
+              />
             </div>
             <div class="form-group">
               <label>Company Name*</label>
               <input
                 type="text"
+                name="company"
                 placeholder="Enter your company name"
                 required
               />
@@ -1106,6 +1116,7 @@
               <label>Phone Number*</label>
               <input
                 type="tel"
+                name="phone"
                 placeholder="Enter your phone number"
                 required
               />
@@ -1114,15 +1125,16 @@
               <label>Business Email ID*</label>
               <input
                 type="email"
+                name="email"
                 placeholder="Enter your business email address"
                 required
               />
             </div>
           </div>
 
-          <div class="form-group" >
+          <div class="form-group">
             <label>Service*</label>
-            <select required>
+            <select name="service" required>
               <option value="" disabled selected>Select</option>
               <option value="technology">Branding, Strategy & Identity</option>
               <option value="healthcare">Design & Communication</option>
@@ -1141,7 +1153,7 @@
           </div>
 
           <div class="checkbox-group">
-            <input type="checkbox" id="agreement" />
+            <input type="checkbox" name="agreement" id="agreement" />
             <label for="agreement"
               >I agree to receive e-mails and WhatsApp messages from Brego
               Business containing promotional offers, notifications, and
@@ -1155,6 +1167,119 @@
             </button>
           </div>
         </form>
+      </div> -->
+      <div class="form-section">
+        <form
+          id="contactForm"
+          action="https://script.google.com/macros/s/AKfycbxwdQOdADinLPYMp-UF_yiA-iWhogDBCLwRPF1AZ184wpBFRvX4eHk7W9H539rxxugZ/exec"
+          method="post"
+        >
+          <div class="form-row">
+            <div class="form-group">
+              <label>Name*</label>
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter your full name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label>Company Name*</label>
+              <input
+                type="text"
+                name="company"
+                placeholder="Enter your company name"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Phone Number*</label>
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Enter your phone number"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label>Business Email ID*</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your business email address"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Service*</label>
+            <select name="service" required>
+              <option value="" disabled selected>Select</option>
+              <option value="technology">Branding, Strategy & Identity</option>
+              <option value="healthcare">Design & Communication</option>
+              <option value="finance">
+                Website & App Design + Development
+              </option>
+              <option value="retail">
+                Social Media & Performance Marketing
+              </option>
+              <option value="manufacturing">Video Production</option>
+              <option value="education">
+                Influencer & Experiential Marketing
+              </option>
+              <option value="other">Lead Generation & Automation</option>
+            </select>
+          </div>
+
+          <div class="checkbox-group">
+            <input type="checkbox" name="agreement" id="agreement" />
+            <label for="agreement">
+              I agree to receive e-mails and WhatsApp messages from Brego
+              Business containing promotional offers, notifications, and
+              messages.
+            </label>
+          </div>
+
+          <div class="form-btn">
+            <button type="submit" class="submit-btn book-call-btn">
+              <i class="fa-solid fa-phone"></i>
+              <span class="btn-text">Book a Call</span>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Centered popup -->
+      <div
+        id="thankyouPopup"
+        style="
+          display: none;
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: #e6e6e6;
+          padding: 30px;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+          z-index: 9999;
+          border-radius: 8px;
+          text-align: center;
+        "
+      >
+        <h2><span class="growth">Thank You!</span></h2>
+        <p style="margin-top: 3px">Our team will connect with you shortly.</p>
+        <button
+          id="closePopup"
+          class="hero-btn phone-icon"
+          style="margin-top: 15px; padding: 8px 15px; cursor: pointer"
+        >
+          Close
+        </button>
       </div>
     </div>
 
@@ -1208,7 +1333,11 @@
           <div class="footer-col">
             <div class="newsletter">
               <h1><strong>Subscribe</strong> to our newsletter</h1>
-              <form action="">
+              <form
+                action="https://script.google.com/macros/s/AKfycbwiCQi8vaG9oDiwOeg_u-Q6UQIXQyRbHAGXB5TMKXMswHEejsNd41ImlA3jheCiD_AlUg/exec"
+                method="POST"
+                id="newsletter-form"
+              >
                 <input
                   class="placeholder"
                   type="email"
@@ -1276,7 +1405,11 @@
             </div> -->
             <div class="newsletter">
               <h1><strong>Subscribe</strong> to our newsletter</h1>
-              <form action="">
+              <form
+                action="https://script.google.com/macros/s/AKfycbwiCQi8vaG9oDiwOeg_u-Q6UQIXQyRbHAGXB5TMKXMswHEejsNd41ImlA3jheCiD_AlUg/exec"
+                method="POST"
+                id="newsletter-form-mobile"
+              >
                 <input
                   class="placeholder"
                   type="email"
@@ -1372,10 +1505,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
     <!-- jQuery (required by Owl Carousel) -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<!-- Owl Carousel JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
       console.clear();
       const randomX = random(-400, 400);
@@ -1432,33 +1565,202 @@
       }
     </script>
     <script>
-  $(document).ready(function () {
-    $(".expertise-card-content").owlCarousel({
-      loop: true,
-      margin: 20,
-      nav: false, // we'll use your custom buttons
-      dots: false,
-      autoplay: true,
-      autoplayTimeout: 3000,
-      autoplayHoverPause: true,
-      responsive: {
-        0: { items: 1 },
-        700: { items: 2 },
-        1000: { items: 3 },
-        1400: { items: 3 }
-      }
+      $(document).ready(function () {
+        $(".expertise-card-content").owlCarousel({
+          loop: true,
+          margin: 20,
+          nav: false, // we'll use your custom buttons
+          dots: false,
+          autoplay: true,
+          autoplayTimeout: 3000,
+          autoplayHoverPause: true,
+          responsive: {
+            0: { items: 1 },
+            700: { items: 2 },
+            1000: { items: 3 },
+            1400: { items: 3 },
+          },
+        });
+
+        // Custom navigation buttons
+        const owl = $(".expertise-card-content");
+        $("#expertise-next").click(function () {
+          owl.trigger("next.owl.carousel");
+        });
+        $("#expertise-prev").click(function () {
+          owl.trigger("prev.owl.carousel");
+        });
+      });
+    </script>
+    <!-- Contact Form Script -->
+    <!-- <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          const form = e.target;
+          const data = new FormData(form);
+
+          const response = await fetch(form.action, {
+            method: "POST",
+            body: data,
+          });
+
+          const result = await response.json();
+
+          if (result.result === "success") {
+            alert("✅ " + result.message);
+            form.reset();
+          } else {
+            alert("❌ " + result.message);
+          }
+        });
+    </script> -->
+
+    <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          const form = e.target;
+          const submitBtn = form.querySelector("button.submit-btn");
+          const btnText = submitBtn.querySelector(".btn-text");
+
+          // Show submitting
+          btnText.textContent = "Submitting...";
+          submitBtn.disabled = true;
+
+          const data = new FormData(form);
+
+          try {
+            const response = await fetch(form.action, {
+              method: "POST",
+              body: data,
+            });
+            const result = await response.json();
+
+            if (result.result === "success") {
+              // Show popup
+              document.getElementById("thankyouPopup").style.display = "block";
+              form.reset();
+            } else {
+              alert(result.message); // fallback if error
+            }
+          } catch (err) {
+            alert("Something went wrong. Please try again!");
+          } finally {
+            btnText.textContent = "Book a Call";
+            submitBtn.disabled = false;
+          }
+        });
+
+      // Close popup button
+      document
+        .getElementById("closePopup")
+        .addEventListener("click", function () {
+          document.getElementById("thankyouPopup").style.display = "none";
+        });
+    </script>
+
+    <!-- Newsletter SCRIPT -->
+    <!-- <script>
+      const form = document.getElementById("newsletter-form");
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const data = new FormData(form);
+
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: data,
+        });
+
+        if (response.ok) {
+          alert("🎉 Thanks for subscribing!");
+          form.reset();
+        } else {
+          alert("❌ Something went wrong. Please try again.");
+        }
+      });
+    </script> -->
+    <script>
+     const form = document.getElementById("newsletter-form");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const submitBtn = form.querySelector("button[type='submit']");
+  const originalText = submitBtn.textContent;
+
+  submitBtn.textContent = "Submitting...";
+  submitBtn.disabled = true;
+
+  const data = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: data,
     });
 
-    // Custom navigation buttons
-    const owl = $(".expertise-card-content");
-    $("#expertise-next").click(function () {
-      owl.trigger("next.owl.carousel");
-    });
-    $("#expertise-prev").click(function () {
-      owl.trigger("prev.owl.carousel");
-    });
-  });
-</script>
+    if (response.ok) {
+      document.getElementById("thankyouPopup").style.display = "block";
+      form.reset();
+    } else {
+      alert("❌ Something went wrong. Please try again.");
+    }
+  } catch (error) {
+    alert("❌ Something went wrong. Please try again.");
+  } finally {
+    submitBtn.textContent = originalText;
+    submitBtn.disabled = false;
+  }
+});
 
+// Popup close button handler
+document.getElementById("closePopup").addEventListener("click", function () {
+  document.getElementById("thankyouPopup").style.display = "none";
+});
+    </script>
+    <script>
+      const form2 = document.getElementById("newsletter-form-mobile");
+
+      form2.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const submitBtn = form2.querySelector("button[type='submit']");
+        const originalText = submitBtn.textContent;
+
+        submitBtn.textContent = "Submitting...";
+        submitBtn.disabled = true;
+        const data = new FormData(form2);
+
+        try {
+          const response = await fetch(form2.action, {
+            method: "POST",
+            body: data,
+          });
+
+          if (response.ok) {
+            document.getElementById("thankyouPopup").style.display = "block";
+            form2.reset();
+          } else {
+            alert("❌ Something went wrong. Please try again.");
+          }
+        } catch (error) {
+          alert("❌ Something went wrong. Please try again.");
+        } finally {
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
+        }
+      });
+
+      // Popup close button handler
+      document
+        .getElementById("closePopup")
+        .addEventListener("click", function () {
+          document.getElementById("thankyouPopup").style.display = "none";
+        });
+    </script>
   </body>
 </html>

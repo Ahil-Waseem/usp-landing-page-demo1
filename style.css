@@ -1525,6 +1525,16 @@ main h1 {
   .expertise-card-text p {
     font-size: 0.9rem;
   }
+  .hero h1 {
+    font-size: 60px;
+    line-height: 70px;
+  }
+  .heading2 {
+    font-size: 65px;
+  }
+  .hero p {
+    font-size: 27px;
+  }
 }
 
 @media (max-width: 480px) {

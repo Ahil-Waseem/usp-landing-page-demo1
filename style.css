@@ -420,10 +420,21 @@ nav ul.dropdown-content {
 }
 
 /* White section after hero */
-.white-section {
+/* .white-section {
   background: #fff;
+  background-color: #ecdaca;
+  background-color: #e6e6e6;
   padding: 100px 20px 50px 20px;
   text-align: center;
+} */
+
+.white-section {
+  /* background: #fff; */
+  /* background-color: #ecdaca; */
+  background-color: #e6e6e6;
+  padding: 100px 20px 100px 20px;
+  text-align: center;
+  margin-top: 100px;
 }
 
 .white-section h2 {
@@ -800,16 +811,21 @@ main h1 {
   list-style: none;
 }
 
-.loop-left {
+/* .loop-left {
   animation: infinity-scroll-left 20s infinite linear 0.5s both;
-}
+  margin: auto;
+} */
+
 
 .loop-right {
-  animation: infinity-scroll-right 20s infinite linear 0.5s both;
+  animation: infinity-scroll-left 20s infinite linear 0.5s both;
+} 
+.loop-right {
+  animation: none;
 }
 
 .logo-list__item {
-  width: calc(100vw / 7);
+  width: calc(100vw / 8);
   height: 120px;
   margin: 0 20px;
 }
@@ -817,6 +833,9 @@ main h1 {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+.logo-list__wrap .logo-list:nth-child(2) {
+  display: none;
 }
 
 .video {
@@ -1049,7 +1068,7 @@ main h1 {
 
 /* Who we Are SECTION CSS START */
 /* Section Container */
-.work-with-section {
+/* .work-with-section {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #e6e6e6;
@@ -1057,7 +1076,7 @@ main h1 {
   margin: 0 auto;
 }
 
-/* Section Title */
+
 .section-title {
   text-align: center;
   margin-bottom: 60px;
@@ -1077,73 +1096,60 @@ main h1 {
   margin: 0 auto;
 }
 
-/* Cards Grid */
+
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  /* margin-bottom: 50px; */
+  
   padding: 50px;
 }
 
-/* Card Styling */
+
 .work-card {
   position: relative;
   height: 450px;
   overflow: hidden;
   cursor: pointer;
-  /* Organic blob shape using border-radius */
+
   background: url("your-image.jpg") center/cover no-repeat;
   border-radius: 20px 20px 120px 20px / 20px 20px 160px 20px;
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Different organic shapes for each card */
+
 .work-card:nth-child(1) {
-  /* border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; */
+ 
   border-radius: 30px 30px 280px 30px / 30px 50px 300px 50px;
 }
 
 .work-card:nth-child(2) {
-  /* border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; */
+ 
   border-radius: 30px 280px 30px 30px / 30px 350px 50px 50px;
 }
 
 .work-card:nth-child(3) {
-  /* border-radius: 40% 60% 60% 40% / 60% 40% 60% 40%; */
+ 
   border-radius: 30px 30px 280px 30px / 30px 50px 300px 50px;
 }
 
-/* Hover - Transform to square */
+
 .work-card:hover {
   border-radius: 20px;
   transform: scale(1.02);
   z-index: 10;
 }
 
-/* Background overlay */
+
 .work-card::before {
   content: "";
   position: absolute;
   inset: 0;
-  /* background: linear-gradient(135deg, rgba(230, 240, 255, 0.7), rgba(200, 220, 255, 0.5)); */
   z-index: 1;
   transition: opacity 0.6s ease;
 }
-/* 
-        .work-card:nth-child(2)::before {
-            background: linear-gradient(135deg, rgba(255, 240, 230, 0.7), rgba(255, 220, 200, 0.5));
-        }
 
-        .work-card:nth-child(3)::before {
-            background: linear-gradient(135deg, rgba(230, 245, 255, 0.7), rgba(210, 235, 255, 0.5));
-        }
 
-        .work-card:hover::before {
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
-        } */
-
-/* Card Image */
 .card-image {
   position: absolute;
   width: 100%;
@@ -1156,7 +1162,7 @@ main h1 {
   transform: scale(1.1);
 }
 
-/* Card Content */
+
 .card-content {
   position: absolute;
   top: 40px;
@@ -1172,7 +1178,7 @@ main h1 {
   transition: all 0.4s ease;
 }
 
-/* Card Description - Slides from bottom */
+
 .card-description {
   position: absolute;
   bottom: 0;
@@ -1193,16 +1199,17 @@ main h1 {
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Hover Effects */
+
 .work-card:hover .card-description {
   transform: translateY(0);
 }
+  */
 
-/* Book a Call Button */
+
 .cta-container2 {
   display: flex;
   justify-content: center;
-  /* margin-top: 50px;   */
+
 }
 
 .book-call-btn {
@@ -1219,25 +1226,20 @@ main h1 {
   cursor: pointer;
   max-width: 200px;
   transition: all 0.3s ease;
-  /* box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3); */
+ 
 }
+
+
+.phone-icon {
+  font-size: 15px;
+} 
+
+/* Who we Are SECTION END */
 .form-btn {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-/* .book-call-btn:hover {
-  background: #060606;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
-} */
-
-.phone-icon {
-  font-size: 15px;
-}
-/* Who we Are SECTION END */
-
 /* Experties Slider Start */
 .expertise-slider {
   display: flex;
@@ -1618,7 +1620,7 @@ main h1 {
   background: linear-gradient(180deg, #e6e6e6 0%, #f2f2f2 50%, #ffffff 100%);
   /* background: linear-gradient(180deg, #eef3ff 0%, #ffffff 85%); */
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.06);
-  transform: translateY(120px);
+  transform: translateY(80px);
   opacity: 2;
 }
 
@@ -1684,13 +1686,14 @@ main h1 {
 
 /* Space after stack */
 .after-space {
-  height: 40vh;
+  height: 30vh;
 }
 
 /* Responsive tweaks */
 @media (max-width: 768px) {
   .card-scroll {
     padding: 40px 28px 48px;
+    transform: translateY(70px);
   }
   .kicker {
     font-size: 22px;
@@ -1994,6 +1997,7 @@ button.subscribe:hover {
     margin: 25px;
   }
 }
+
 @media (max-width: 1024px) {
   .footer-main {
     grid-template-columns: 1fr 1fr;
@@ -2053,8 +2057,16 @@ button.subscribe:hover {
     color: #1a1a1a !important;
   }
 
+  nav {
+    padding: 18px 25px;
+  }
+
   .nav-btn {
-    display: none;
+    /* display: none; */
+    font-size: 10px;
+  }
+  .phone-icon {
+    font-size: 10px;
   }
 
   .menu-toggle {
@@ -2097,9 +2109,9 @@ button.subscribe:hover {
   .hero p {
     font-size: 16px;
   }
-.hero h1 {
-  font-size: 60px;
-}
+  .hero h1 {
+    font-size: 60px;
+  }
   .hero {
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
@@ -2366,6 +2378,27 @@ button.subscribe:hover {
   .expertise-card {
     margin: 25px;
   }
+  .hero {
+    min-height: 70vh;
+  }
+  .glow-container {
+    min-height: 80vh;
+  }
+  .loop-right {
+    animation: infinity-scroll-left 20s infinite linear 0.5s both;
+  }
+    .logo-list__wrap .logo-list:nth-child(2) {
+    display: flex;
+  }
+  .video {
+    margin-top: 50px;
+}
+    .white-section {
+      margin-top: 50px;
+    }
+    .after-space {
+  height: 25vh;
+}
 }
 
 @media (max-width: 480px) {
@@ -2401,7 +2434,7 @@ button.subscribe:hover {
     font-size: 22px;
   }
   .white-section {
-    padding: 50px 20px;
+    padding: 50px 20px 20px 30px;
   }
   .logo-list__item {
     margin: 0 15px;

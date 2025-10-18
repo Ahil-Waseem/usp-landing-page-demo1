@@ -367,7 +367,8 @@ nav ul.dropdown-content {
 
 .hero .round-r {
   font-family: "roundhand", sans-serif !important;
-  font-size: 108px;
+  /* font-size: 108px; */
+  font-size: 90px;
   color: #af0300;
 }
 
@@ -2098,13 +2099,13 @@ button.subscribe:hover {
     flex-direction: column;
     align-items: center;
   }
-    .case-studies .image-card {
-    width: 100%;          /* Full width for small screens */
-    flex: none;           /* Remove flex-grow to avoid stretching */
-    margin-bottom: 15px;  /* Add spacing between cards */
-    border-radius: 8px;   /* Slightly smaller radius */
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* lighter shadow */
-    padding: 10px;        /* Optional padding */
+  .case-studies .image-card {
+    width: 100%; /* Full width for small screens */
+    flex: none; /* Remove flex-grow to avoid stretching */
+    margin-bottom: 15px; /* Add spacing between cards */
+    border-radius: 8px; /* Slightly smaller radius */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* lighter shadow */
+    padding: 10px; /* Optional padding */
   }
 }
 /* Case Studie css END */

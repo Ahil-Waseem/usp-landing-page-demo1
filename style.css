@@ -538,15 +538,12 @@ nav ul.dropdown-content {
 
 /* CTA Form CSS Start */
 .container {
-  /* max-width: 1200px; */
   background-color: #060606;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* gap: 20px; */
-  padding: 50px;
-  /* align-items: center; */
-  /* justify-content: center; */
+
+  padding: 100px 50px;
 }
 
 .left-section {
@@ -816,10 +813,9 @@ main h1 {
   margin: auto;
 } */
 
-
 .loop-right {
   animation: infinity-scroll-left 20s infinite linear 0.5s both;
-} 
+}
 .loop-right {
   animation: none;
 }
@@ -942,7 +938,7 @@ main h1 {
 /* Testimonial CSS End */
 
 .testimonials-section {
-  padding: 50px 0;
+  padding: 100px 0;
   text-align: center;
   background-color: #e6e6e6;
 }
@@ -1205,11 +1201,9 @@ main h1 {
 }
   */
 
-
 .cta-container2 {
   display: flex;
   justify-content: center;
-
 }
 
 .book-call-btn {
@@ -1226,13 +1220,11 @@ main h1 {
   cursor: pointer;
   max-width: 200px;
   transition: all 0.3s ease;
- 
 }
-
 
 .phone-icon {
   font-size: 15px;
-} 
+}
 
 /* Who we Are SECTION END */
 .form-btn {
@@ -1249,7 +1241,7 @@ main h1 {
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
-  padding: 60px 0;
+  padding: 100px 0;
   position: relative;
 }
 
@@ -1585,9 +1577,9 @@ main h1 {
 /* SCROLL SECTION CSS START */
 
 .wrap {
-  max-width: 1100px;
+  /* max-width: 1100px; */
   margin: 0 auto;
-  padding: 60px 20px 0;
+  padding: 100px 20px 0;
 }
 
 .section-heading {
@@ -2387,18 +2379,23 @@ button.subscribe:hover {
   .loop-right {
     animation: infinity-scroll-left 20s infinite linear 0.5s both;
   }
-    .logo-list__wrap .logo-list:nth-child(2) {
+  .logo-list__wrap .logo-list:nth-child(2) {
     display: flex;
   }
   .video {
     margin-top: 50px;
-}
-    .white-section {
-      margin-top: 50px;
-    }
-    .after-space {
-  height: 25vh;
-}
+  }
+  .white-section {
+    margin-top: 50px;
+  }
+  .after-space {
+    height: 25vh;
+  }
+  .book-call-btn {
+    padding: 10px 20px;
+    font-size: 10px;
+    max-width: 140px;
+  }
 }
 
 @media (max-width: 480px) {

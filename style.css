@@ -316,7 +316,7 @@ nav ul.dropdown-content {
 
 /* Hero Section */
 .hero {
-  min-height: 100vh;
+  min-height: 110vh;
   background-color: #060606;
   display: flex;
   flex-direction: column;
@@ -332,9 +332,9 @@ nav ul.dropdown-content {
 }
 
 .hero h1 {
-  font-size: 70px;
+  font-size: 60px;
   font-weight: 700;
-  margin-top: 40px;
+  margin-top: 50px;
   line-height: 80px;
   /* margin-bottom: 15px; */
   letter-spacing: -1;
@@ -346,8 +346,8 @@ nav ul.dropdown-content {
 
 .hero p {
   /* font-size: 1.2rem; */
-  font-size: 30px;
-  margin-top: 32px;
+  font-size: 24px;
+  margin-top: 20px;
   margin-bottom: 25px;
   z-index: 5;
 }
@@ -377,10 +377,11 @@ nav ul.dropdown-content {
 .partner {
   z-index: 5;
 }
-.partner h1 {
-  font-size: 16px;
+.partner p {
+  font-size: 20px;
   z-index: 5;
   color: #fff;
+  margin-top: 25px;
 }
 
 /* .hero-btn:hover {
@@ -402,7 +403,7 @@ nav ul.dropdown-content {
   
 } */
 .heading2 {
-  font-size: 68px;
+  font-size: 60px;
   letter-spacing: -1;
   color: #fff !important;
   z-index: 5;
@@ -413,12 +414,42 @@ nav ul.dropdown-content {
   z-index: 5;
 }
 .recognized img {
-  height: 37px;
+  height: 30px;
   width: 100%;
   filter: brightness(0) invert(1);
   z-index: 5;
 }
-
+.recognized2 {
+  display: flex;
+  gap: 50px;
+  z-index: 10;
+}
+#img1 {
+  filter: brightness(0) invert(1);
+}
+.recognized2 img {
+  height: 50px;
+  width: 100%;
+  filter: brightness(1) invert(1);
+  z-index: 5;
+}
+.recognized-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 10;
+}
+.recognized-item #img1 {
+  width: 90px;
+}
+.recognized-item p {
+  margin-top: 1px;
+  font-size: 8px;
+  letter-spacing: -1;
+  font-weight: 500;
+  color: #fff; /* adjust based on your background */
+}
 /* White section after hero */
 /* .white-section {
   background: #fff;
@@ -1043,7 +1074,7 @@ main h1 {
   font-weight: 700;
   font-size: 1.2rem;
   color: #af0300;
-  border: 2px solid #f3f1ed;
+  border: 2px solid #af0300;
   /* background: #060606; */
   object-fit: cover;
 }
@@ -1579,6 +1610,7 @@ main h1 {
 .wrap {
   /* max-width: 1100px; */
   margin: 0 auto;
+  background: #e6e6e6;
   padding: 100px 20px 0;
 }
 
@@ -1848,7 +1880,7 @@ main h1 {
 }
 
 .accordion-content ul li a:hover {
-  color: #4f46e5;
+  color: #af0300;
 }
 
 /* Footer Bottom */
@@ -1876,8 +1908,9 @@ main h1 {
   transition: color 0.3s ease;
 }
 
+.footer-links span:hover,
 .footer-links a:hover {
-  color: #4f46e5;
+  color: #af0300;
 }
 
 .footer-links .separator {
@@ -1902,7 +1935,7 @@ main h1 {
 }
 
 .social-icons a:hover {
-  color: #4f46e5;
+  color: #af0300;
   transform: translateY(-2px);
 }
 
@@ -1913,10 +1946,7 @@ main h1 {
 }
 
 /* Footer Newsletter CSS Start */
-.newsletter form {
-  /* display: contents; */
-  /* position: relative; */
-}
+
 .newsletter h1 {
   font-size: 18px;
 }
@@ -1983,10 +2013,111 @@ button.subscribe:hover {
 }
 /* Footer Newsletter CSS END */
 
+/* Case STudies css start */
+
+.case-studies {
+  /* max-width: 1100px; */
+  padding: 100px 50px;
+  margin: auto;
+}
+
+.case-studies h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.case-studies .image-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.case-studies .image-card {
+  background: #fff;
+  flex: 1;
+  /* padding: 15px; */
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  transition: transform 0.3s;
+}
+
+.case-studies .image-card:hover {
+  transform: translateY(-5px);
+}
+
+.case-studies .image-container {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.case-studies .image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+
+.case-studies .image-container.blur img {
+  filter: blur(5px);
+}
+
+.case-studies .image-name {
+  margin: 12px 0 8px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+.case-studies .btn {
+  background: #af0300;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  /* border-radius: 6px; */
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+/* .case-studies .btn:hover {
+      background: #0056b3;
+    } */
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  .case-studies .image-section {
+    flex-direction: column;
+    align-items: center;
+  }
+    .case-studies .image-card {
+    width: 100%;          /* Full width for small screens */
+    flex: none;           /* Remove flex-grow to avoid stretching */
+    margin-bottom: 15px;  /* Add spacing between cards */
+    border-radius: 8px;   /* Slightly smaller radius */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* lighter shadow */
+    padding: 10px;        /* Optional padding */
+  }
+}
+/* Case Studie css END */
+
 /* Responsive Design */
 @media (min-width: 1030px) and (max-width: 1440px) {
   .expertise-card {
     margin: 25px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1025px) {
+  .glow-container {
+    min-height: 104vh;
   }
 }
 
@@ -2096,7 +2227,17 @@ button.subscribe:hover {
     width: 100%;
   }
 }
-
+@media (max-width: 800px) {
+  .recognized img {
+    height: 20px;
+  }
+  .hero h1 {
+    font-size: 55px;
+  }
+  .heading2 {
+    font-size: 55px;
+  }
+}
 @media (max-width: 768px) {
   .hero p {
     font-size: 16px;
@@ -2371,10 +2512,10 @@ button.subscribe:hover {
     margin: 25px;
   }
   .hero {
-    min-height: 70vh;
+    min-height: 100vh;
   }
   .glow-container {
-    min-height: 80vh;
+    min-height: 90vh;
   }
   .loop-right {
     animation: infinity-scroll-left 20s infinite linear 0.5s both;
@@ -2396,6 +2537,27 @@ button.subscribe:hover {
     font-size: 10px;
     max-width: 140px;
   }
+  /* .recognized2 .recognized-item{
+width: 10px;
+  } */
+  .recognized {
+    display: flex;
+    flex-wrap: wrap; /* allows next-line wrapping */
+    justify-content: center; /* centers all logos */
+    gap: 30px; /* spacing between logos */
+    max-width: 1000px; /* limit container width so wrapping happens */
+    margin: 0 auto; /* center container */
+  }
+
+  .recognized img {
+    height: 20px;
+    width: auto;
+    flex: 1 1 5%; /* roughly 4 per row; adjust % for 3 per row */
+    max-width: 200px; /* prevent images from getting too large */
+    object-fit: contain;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 @media (max-width: 480px) {
@@ -2485,6 +2647,35 @@ button.subscribe:hover {
     font-size: 45px;
     color: #af0300;
   }
+  .recognized-item #img1 {
+    height: 40px;
+  }
+  .recognized-item img {
+    height: 40px;
+  }
+  .recognized-item p {
+    font-size: 8px;
+    margin-top: 2px;
+  }
+  .case-studies {
+    /* max-width: 1100px; */
+    padding: 50px 20px;
+    margin: auto;
+  }
+}
+
+@media (min-height: 450px) {
+  .hero {
+    min-height: 80vh;
+  }
+  .partner p {
+    font-size: 18px;
+  }
+}
+@media (min-height: 425px) {
+  .hero {
+    min-height: 100vh;
+  }
 }
 
 @media (max-width: 375px) {
@@ -2505,5 +2696,15 @@ button.subscribe:hover {
   } */
   .recognized img {
     height: 17px;
+  }
+  .recognized-item #img1 {
+    height: 40px;
+  }
+  .recognized-item img {
+    height: 40px;
+  }
+  .recognized-item p {
+    font-size: 8px;
+    margin-top: 2px;
   }
 }

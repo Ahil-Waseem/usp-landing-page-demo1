@@ -219,3 +219,16 @@ window.addEventListener("load", function () {
   //   // Example: call dialer or open modal with contact info
   //   window.location.href = 'tel:+91 9833022443';
   // });
+// CASE STUDIES START
+    function openPDF(pdfUrl, element) {
+      const container = element.closest('.image-card').querySelector('.image-container');
+      container.classList.add('blur');
+
+      window.open(pdfUrl, '_blank');
+
+      setTimeout(() => {
+        container.classList.remove('blur');
+      }, 1000);
+    }
+
+// CASE STUDIES END

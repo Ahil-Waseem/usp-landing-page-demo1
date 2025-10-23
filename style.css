@@ -852,6 +852,10 @@ main h1 {
   animation: none;
 }
 
+.blur-img{
+  filter: blur(5px);
+}
+
 .logo-list__item {
   width: calc(100vw / 8);
   height: 120px;

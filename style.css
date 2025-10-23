@@ -384,6 +384,9 @@ nav ul.dropdown-content {
   color: #fff;
   margin-top: 25px;
 }
+.award-text{
+  letter-spacing: 1px; 
+}
 
 /* .hero-btn:hover {
   background-color: #e0e0e0;
@@ -2576,6 +2579,9 @@ width: 10px;
     flex: 1 1 5%; /* roughly 4 per row; adjust % for 3 per row */
     max-width: 200px; /* prevent images from getting too large */
     object-fit: contain;
+  }
+   .award-text{
+    letter-spacing: normal;
   }
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {

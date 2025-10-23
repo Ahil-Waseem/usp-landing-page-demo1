@@ -970,6 +970,7 @@ main h1 {
 /* Testimonial CSS End */
 
 .testimonials-section {
+  /* width: 100%; */
   padding: 100px 0;
   text-align: center;
   background-color: #e6e6e6;
@@ -1024,6 +1025,8 @@ main h1 {
   justify-content: flex-start;
   overflow-x: auto;
   scroll-behavior: smooth;
+   /* scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; */
   padding: 20px 50px;
   /* max-width: 1200px; */
   margin: 0 auto;

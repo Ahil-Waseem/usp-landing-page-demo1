@@ -107,4 +107,3 @@ function openPDF(pdfUrl, element) {
     container.classList.remove("blur");
   }, 1000);
 }
-  

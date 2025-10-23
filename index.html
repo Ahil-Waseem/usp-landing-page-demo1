@@ -178,7 +178,7 @@
     <!-- Next Section -->
     <section class="white-section" id="solutions">
       <main class="brands">
-        <h1>We're trusted partner of many Businesses</h1>
+        <h1>We're trusted partner of:</h1>
         <div class="logo-list__wrap">
           <ul class="logo-list loop-right">
             <li class="logo-list__item">
@@ -283,17 +283,24 @@
     </section>
 
     <!-- Case studey Section Start -->
-    <section class="case-studies">
+   <section class="case-studies">
       <h2>Our Case Studies</h2>
 
       <div class="image-section">
         <!-- Image 1 -->
         <div class="image-card">
           <div
-            class="image-container blur-img"
+            class="image-container"
             onclick="openPDF('assets/images/Bouganvilla-Case-study.pdf', this)"
           >
-            <img src="assets/images/cs1.jpeg" alt="Case Study 1" />
+            <img
+              src="assets/images/cs1.jpeg"
+              alt="Case Study 1"
+              class="blur-img"
+            />
+            <div class="click-text">
+              <i class="fa-regular fa-eye" style="font-size: 50px"></i>
+            </div>
           </div>
           <div class="image-name">Case Study Bouganvilla</div>
           <button
@@ -307,10 +314,17 @@
         <!-- Image 2 -->
         <div class="image-card">
           <div
-            class="image-container blur-img"
+            class="image-container" 
             onclick="openPDF('assets/images/Land-Leisure.pdf', this)"
           >
-            <img src="assets/images/cs2.jpeg" alt="Case Study 2" />
+            <img
+              src="assets/images/cs2.jpeg"
+              alt="Case Study 2"
+              class="blur-img"
+            />
+            <div class="click-text">
+              <i class="fa-regular fa-eye" style="font-size: 50px"></i>
+            </div>
           </div>
           <div class="image-name">Case Study Land-Leisure</div>
           <button
@@ -324,10 +338,14 @@
         <!-- Image 3 -->
         <div class="image-card">
           <div
-            class="image-container blur-img"
+            class="image-container"
             onclick="openPDF('assets/images/My-NIrvana Stays-Case-Study.pdf', this)"
           >
-            <img src="assets/images/cs3.jpeg" alt="Case Study 3" />
+            <img src="assets/images/cs3.jpeg" 
+            alt="Case Study 3"
+                           class="blur-img"
+            />
+            <div class="click-text"><i class="fa-regular fa-eye" style="font-size: 50px;"></i></div>
           </div>
           <div class="image-name">Case Study My NIrvana Stays</div>
           <button
@@ -412,7 +430,7 @@
     <!-- Sliding SCROLL  Section START -->
     <section class="wrap">
       <h2 class="section-heading">Why We’re Different</h2>
-      <p class="section-sub">We Don’t Sell Services - We Engineer Growth.</p>
+      <p class="section-sub">We are not just Service Provider but your <true class="growth">true growth partner.</span></p>
 
       <div class="stack" id="stack">
         <!-- CARD 0 -->
@@ -1339,7 +1357,7 @@
                   placeholder="example@gmail.com"
                 />
                 <button
-                  class="subscribe"
+                  class="subscribe subsBtn"
                   type="submit"
                   name="submit"
                   value="Subscribe"
@@ -1411,7 +1429,8 @@
                   placeholder="example@gmail.com"
                 /><br />
                 <button
-                  class="subscribe"
+                  class="subscribe subsBtn"
+                  
                   type="submit"
                   name="submit"
                   value="Subscribe"
@@ -1764,6 +1783,33 @@
         .addEventListener("click", function () {
           document.getElementById("thankyouPopup").style.display = "none";
         });
+    </script>
+    <script>
+      const emailInput = document.querySelectorAll("#email");
+      const subsButton = document.querySelectorAll(".subsBtn");
+      console.log(emailInput);
+      console.log(subsButton);
+      const changeColor = (i) => {
+        if(emailInput[i].value.length > 0){
+subsButton.forEach((btn) => {
+btn.classList.add("redbg");
+})
+
+          // subsButton.classList.add("redbg");
+        }else{
+          subsButton.forEach((btn) =>{
+btn.classList.remove("redbg");
+          })
+          // subsButton.classList.remove("redbg");
+
+        }
+      };
+         emailInput.forEach((e, i) => {
+        e.addEventListener("input", () => changeColor(i));
+         });
+// emailInput.addEventListener("input", changeColor);
+
+      
     </script>
   </body>
 </html>

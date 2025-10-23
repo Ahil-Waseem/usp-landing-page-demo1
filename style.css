@@ -852,7 +852,7 @@ main h1 {
   animation: none;
 }
 
-.blur-img{
+.blur-img {
   filter: blur(5px);
 }
 
@@ -1029,7 +1029,7 @@ main h1 {
   justify-content: flex-start;
   overflow-x: auto;
   scroll-behavior: smooth;
-   /* scroll-snap-type: x mandatory;
+  /* scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch; */
   padding: 20px 50px;
   /* max-width: 1200px; */
@@ -1961,7 +1961,7 @@ main h1 {
 .newsletter .placeholder {
   /* background-color: #060606; */
   padding: 10px 15px;
-  color: #fff;
+  color: #000000;
   margin-top: 12px;
   border: 1px solid #060606;
   border-radius: 20px;
@@ -1969,11 +1969,14 @@ main h1 {
   transition: background-color 0.3s ease;
 }
 .newsletter .placeholder:hover {
-  background-color: #af0300;
+  /* background-color: #af0300; */
   cursor: pointer;
 }
 .newsletter input::placeholder {
   color: #060606;
+}
+.redbg {
+  background-color: #af0300 !important;
 }
 button.subscribe {
   margin-top: 10px;
@@ -1987,9 +1990,9 @@ button.subscribe {
   transition: background-color 0.3s ease;
   /* transform: translate(50% 50%); */
 }
-button.subscribe:hover {
+/* button.subscribe:hover {
   background-color: #af0300;
-}
+} */
 /* Accordian newsletter */
 
 .accordion-item .newsletter h1 {
@@ -1999,13 +2002,13 @@ button.subscribe:hover {
 }
 .accordion-item .newsletter .placeholder {
   background-color: #fff;
-  color: #fff;
+  color: #060606;
   padding: 10px 15px;
   margin-top: 12px;
   border-radius: 20px;
 }
 .accordion-item .newsletter .placeholder:hover {
-  background-color: #af0300;
+  background-color: #fff;
 }
 
 button.subscribe {
@@ -2016,9 +2019,9 @@ button.subscribe {
   border: none;
   font-weight: 600;
 }
-button.subscribe:hover {
+/* button.subscribe:hover {
   background-color: #af0300;
-}
+} */
 /* Footer Newsletter CSS END */
 
 /* Case STudies css start */
@@ -2076,6 +2079,7 @@ button.subscribe:hover {
 
 .case-studies .image-container.blur img {
   filter: blur(5px);
+  
 }
 
 .case-studies .image-name {
@@ -2094,6 +2098,16 @@ button.subscribe:hover {
   margin-bottom: 15px;
   cursor: pointer;
   transition: background 0.3s;
+}
+.click-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  color: white;
+  z-index: 999;
+  color: #af0300;
 }
 
 /* .case-studies .btn:hover {

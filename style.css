@@ -1636,7 +1636,7 @@ main h1 {
 /* Tall scroll area so the stacking has room */
 .stack {
   position: relative;
-  min-height: 320vh;
+  min-height: 200vh;
 }
 
 /* Card base */
@@ -1790,7 +1790,7 @@ main h1 {
 }
 .footer-logo-col p {
   margin-top: 20px;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .footer-logo {
@@ -2079,7 +2079,6 @@ button.subscribe {
 
 .case-studies .image-container.blur img {
   filter: blur(5px);
-  
 }
 
 .case-studies .image-name {
@@ -2106,7 +2105,7 @@ button.subscribe {
   transform: translate(-50%, -50%);
   cursor: pointer;
   color: white;
-  z-index: 999;
+  z-index: 900;
   color: #af0300;
 }
 

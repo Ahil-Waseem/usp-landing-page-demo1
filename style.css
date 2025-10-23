@@ -364,7 +364,7 @@ nav ul.dropdown-content {
   z-index: 5;
   /* border: none; */
 }
-#recognized{
+#recognized {
   margin-top: 35px;
 }
 
@@ -387,8 +387,8 @@ nav ul.dropdown-content {
   color: #fff;
   margin-top: 25px;
 }
-.award-text{
-  letter-spacing: 1px; 
+.award-text {
+  letter-spacing: 1px;
 }
 
 /* .hero-btn:hover {
@@ -837,12 +837,14 @@ main h1 {
 
 .logo-list__wrap {
   display: flex;
+  /* flex-wrap: wrap; */
   overflow: hidden;
   margin-top: 40px;
 }
 
 .logo-list {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
 }
 
@@ -863,19 +865,28 @@ main h1 {
 }
 
 .logo-list__item {
-  width: calc(100vw / 8);
+  width: calc(100vw / 5);
   height: 120px;
   margin: 0 20px;
 }
 .logo-list__item > img {
-  width: 100%;
-  height: 100%;
+  width: 70%;
+  height: 90%;
   object-fit: contain;
 }
 .logo-list__wrap .logo-list:nth-child(2) {
   display: none;
 }
+/* #today-logo{
+  max-width: 210px;
+}
+#nirvana-logo{
+  max-width: 220px;
 
+}
+#rooted{
+  max-width: 200px;
+} */
 .video {
   margin-top: 100px;
 }
@@ -1510,6 +1521,7 @@ main h1 {
   padding-bottom: 0 !important;
 }
 
+
 @media (max-width: 768px) {
   .expertise-slider {
     padding: 40px 0;
@@ -2037,12 +2049,12 @@ button.subscribe {
   padding: 100px 50px;
   margin: auto;
 }
-.abs-overlay{
+.abs-overlay {
   position: absolute;
   z-index: 800;
-  width : 100%; 
-  height : 100%;
-  top : 0;  
+  width: 100%;
+  height: 100%;
+  top: 0;
   background-color: black;
   opacity: 0.8;
 }
@@ -2150,11 +2162,33 @@ button.subscribe {
   .expertise-card {
     margin: 25px;
   }
+  
 }
 @media (min-width: 1024px) and (max-width: 1025px) {
   .glow-container {
-    min-height: 104vh;
+    min-height: 103vh;
   }
+  #recognized{
+    margin-top: 0px;
+  }
+  .phone-icon {
+    font-size: 13px;
+}
+.hero .round-r {
+  font-size: 77px;
+}
+.hero h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-top: 90px;
+    line-height: 60px;
+    /* margin-bottom: 15px; */
+    letter-spacing: -1;
+    z-index: 5;
+}
+.heading2{
+  font-size: 50px;
+}
 }
 
 @media (max-width: 1024px) {
@@ -2268,11 +2302,25 @@ button.subscribe {
     height: 20px;
   }
   .hero h1 {
-    font-size: 55px;
+    font-size: 47px;
   }
   .heading2 {
-    font-size: 55px;
+    font-size: 47px;
   }
+  .hero h1{
+    line-height: 60px;
+  }
+      .hero p {
+        margin-top: 10px;
+        font-size: 20px;
+    }
+    .hero .round-r{
+      font-size: 72px;
+    }
+    .award-text{
+font-size: 8px !important;
+    }
+  
 }
 @media (max-width: 768px) {
   .hero p {
@@ -2516,6 +2564,12 @@ button.subscribe {
   .heading2 {
     font-size: 60px;
   }
+  .logo-list{
+    flex-wrap: nowrap !important;
+  }
+   .glow-container {
+    min-height: 100vh;
+  }
 }
 
 @media (max-width: 640px) {
@@ -2551,7 +2605,7 @@ button.subscribe {
     min-height: 100vh;
   }
   .glow-container {
-    min-height: 90vh;
+    min-height: 100vh;
   }
   .loop-right {
     animation: infinity-scroll-left 20s infinite linear 0.5s both;
@@ -2580,7 +2634,7 @@ width: 10px;
     display: flex;
     flex-wrap: wrap; /* allows next-line wrapping */
     justify-content: center; /* centers all logos */
-    gap: 30px; /* spacing between logos */
+    gap: 20px; /* spacing between logos */
     max-width: 1000px; /* limit container width so wrapping happens */
     margin: 0 auto; /* center container */
   }
@@ -2592,7 +2646,7 @@ width: 10px;
     max-width: 200px; /* prevent images from getting too large */
     object-fit: contain;
   }
-   .award-text{
+  .award-text {
     letter-spacing: normal;
   }
 }
@@ -2620,7 +2674,7 @@ width: 10px;
   }
   .hero p {
     font-size: 14px;
-    margin-top: 25px;
+    margin-top: 15px;
   }
   .partner h1 {
     font-size: 16px;
@@ -2700,6 +2754,9 @@ width: 10px;
     /* max-width: 1100px; */
     padding: 50px 20px;
     margin: auto;
+  }
+  .logo-list__item > img {
+    width: 100%;
   }
 }
 

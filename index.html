@@ -181,27 +181,48 @@
         <h1>We're Trusted Partner Of</h1>
         <div class="logo-list__wrap">
           <ul class="logo-list loop-right">
-            <li class="logo-list__item">
-              <img src="/assets/images/casa-logo.png" alt="" />
+             <li class="logo-list__item" id="rooted">
+              <img src="/assets/images/rooted2.png" alt="" />
             </li>
+          
 
             <li class="logo-list__item">
               <img src="/assets/images/aabo.png" alt="" />
             </li>
 
             <li class="logo-list__item">
-              <img src="/assets/images/nr-black.png" alt="" />
+              <img src="/assets/images/Kred_logo-removebg-preview.png" alt="" />
             </li>
+            
             <li class="logo-list__item">
+             <img src="/assets/images/MNS BLACK.png" alt="" />
+           </li>
+          
+
+            <li class="logo-list__item">
+              <img src="/assets/images/casa-logo.png" alt="" />
+            </li>
+            
+             
+            <li class="logo-list__item" id="today-logo">
               <img src="/assets/images/today-new-logo.png" alt="" />
             </li>
 
+           <li class="logo-list__item">
+              <img src="/assets/images/Sundeck.png" alt="" />
+            </li>
+             <li class="logo-list__item" id="nirvana-logo">
+              <img src="/assets/images/nr-black.png" alt="" />
+            </li>
+             
+<!-- 
             <li class="logo-list__item">
               <img src="/assets/images/MNS BLACK.png" alt="" />
             </li>
             <li class="logo-list__item">
               <img src="/assets/images/Sundeck.png" alt="" />
             </li>
+             -->
           </ul>
 
           <ul class="logo-list loop-right">
@@ -226,8 +247,15 @@
             <li class="logo-list__item">
               <img src="/assets/images/Sundeck.png" alt="" />
             </li>
+             <li class="logo-list__item">
+              <img src="/assets/images/Kred_logo-removebg-preview.png" alt="" />
+            </li>
+               <li class="logo-list__item" id="rooted">
+              <img src="/assets/images/rooted2.png" alt="" />
+            </li>
           </ul>
         </div>
+        
 
         <!-- <div class="logo-list__wrap">
           <ul class="logo-list loop-right">
@@ -1591,34 +1619,63 @@
         return (direction = 1) => (min + delta * Math.random()) * direction;
       }
     </script>
-    <script>
-      $(document).ready(function () {
-        $(".expertise-card-content").owlCarousel({
-          loop: true,
-          margin: 20,
-          nav: false, // we'll use your custom buttons
-          dots: false,
-          autoplay: true,
-          autoplayTimeout: 3000,
-          autoplayHoverPause: true,
-          responsive: {
-            0: { items: 1 },
-            700: { items: 2 },
-            1000: { items: 3 },
-            1400: { items: 3 },
-          },
-        });
+   <script>
+$(document).ready(function () {
+  const $carousel = $(".expertise-card-content");
 
-        // Custom navigation buttons
-        const owl = $(".expertise-card-content");
-        $("#expertise-next").click(function () {
-          owl.trigger("next.owl.carousel");
-        });
-        $("#expertise-prev").click(function () {
-          owl.trigger("prev.owl.carousel");
-        });
-      });
-    </script>
+  // Destroy any existing instance
+  if ($carousel.hasClass("owl-loaded")) {
+    $carousel.trigger("destroy.owl.carousel");
+  }
+
+  // Initialize carousel without autoplay
+  $carousel.owlCarousel({
+    loop: true,
+    margin: 20,
+    nav: false,
+    dots: false,
+    autoplay: false, // turn off default autoplay
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    smartSpeed: 8000,
+    slideTransition: "linear",
+    responsive: {
+      0: { items: 1 },
+      700: { items: 2 },
+      1000: { items: 3 },
+      1400: { items: 3 },
+    },
+  });
+
+  // Get carousel DOM element
+  const owlStage = $carousel.find('.owl-stage');
+
+  // Continuous scroll using requestAnimationFrame
+  let scrollSpeed = 0.5; // pixels per frame, adjust for speed
+  let isPaused = false;
+
+  function animate() {
+    if (!isPaused) {
+      const currentX = parseFloat(owlStage.css('transform').split(',')[4]) || 0;
+      owlStage.css('transform', `translate3d(${currentX - scrollSpeed}px, 0px, 0px)`);
+    }
+    requestAnimationFrame(animate);
+  }
+  animate();
+
+  // Pause on hover
+  $carousel.on('mouseenter', function() {
+    isPaused = true;
+  });
+
+  // Resume on mouse leave
+  $carousel.on('mouseleave', function() {
+    isPaused = false;
+  });
+});
+</script>
+
     <!-- Contact Form Script -->
     <!-- <script>
       document

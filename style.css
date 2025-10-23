@@ -364,6 +364,9 @@ nav ul.dropdown-content {
   z-index: 5;
   /* border: none; */
 }
+#recognized{
+  margin-top: 35px;
+}
 
 .hero .round-r {
   font-family: "roundhand", sans-serif !important;
@@ -2034,6 +2037,15 @@ button.subscribe {
   padding: 100px 50px;
   margin: auto;
 }
+.abs-overlay{
+  position: absolute;
+  z-index: 800;
+  width : 100%; 
+  height : 100%;
+  top : 0;  
+  background-color: black;
+  opacity: 0.8;
+}
 
 .case-studies h2 {
   text-align: center;
@@ -2081,7 +2093,7 @@ button.subscribe {
 }
 
 .case-studies .image-container.blur img {
-  filter: blur(5px);
+  filter: blur(4px);
 }
 
 .case-studies .image-name {

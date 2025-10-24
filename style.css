@@ -437,8 +437,12 @@ nav ul.dropdown-content {
 .recognized2 img {
   height: 50px;
   width: 100%;
-  filter: brightness(1) invert(1);
+  /* filter: brightness(1) invert(1); */
   z-index: 5;
+}
+.recognized3 img{
+  filter: brightness(1) invert(1);
+
 }
 .recognized-item {
   display: flex;
@@ -1520,6 +1524,39 @@ main h1 {
   overflow: hidden;
   padding-bottom: 0 !important;
 }
+.expertise-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  font-size: 28px;
+  padding: 10px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.expertise-btn:hover {
+  background: #af0300;
+  color: #fff;
+  border-color: #af0300;
+}
+
+#expertise-prev {
+  position: absolute;
+  left: 10px;
+  top: 45%;
+  transform: translateY(-50%);
+  z-index: 20;
+}
+
+#expertise-next {
+  position: absolute;
+  right: 10px;
+  top: 45%;
+  transform: translateY(-50%);
+  z-index: 20;
+}
+
 
 
 @media (max-width: 768px) {

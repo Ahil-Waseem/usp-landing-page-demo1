@@ -849,6 +849,7 @@ main h1 {
 .logo-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   list-style: none;
 }
 
@@ -2326,6 +2327,11 @@ button.subscribe {
     width: calc(100vw / 7);
     height: 120px;
     margin: 0 20px;
+  }
+  .logo-list__item > img {
+    width: 80%;
+  width: calc(100vw / 6);
+
   }
 }
 @media (max-width: 768px) {

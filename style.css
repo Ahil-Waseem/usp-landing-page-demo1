@@ -1586,6 +1586,7 @@ main h1 {
   .hero p {
     font-size: 27px;
   }
+
 }
 
 @media (max-width: 480px) {
@@ -2320,6 +2321,11 @@ button.subscribe {
     .award-text{
 font-size: 8px !important;
     }
+      .logo-list__item {
+  width: calc(100vw / 7);
+  height: 120px;
+  margin: 0 20px;
+}
   
 }
 @media (max-width: 768px) {

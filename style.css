@@ -139,7 +139,7 @@ body {
   /* position:fixed; */
   position: absolute;
   width: 100%;
-  min-height: 100vh;
+  min-height: 110vh;
 }
 /* Header Animation CSS END */
 
@@ -382,7 +382,7 @@ nav ul.dropdown-content {
   z-index: 5;
 }
 .partner p {
-  font-size: 20px;
+  font-size: 22px !important;
   z-index: 5;
   color: #fff;
   margin-top: 25px;
@@ -2067,7 +2067,7 @@ button.subscribe {
   text-align: center;
   font-size: 36px;
   margin-bottom: 30px;
-  color: #333;
+  color: #060606;
 }
 
 .case-studies .image-section {
@@ -2162,14 +2162,36 @@ button.subscribe {
 /* Case Studie css END */
 
 /* Responsive Design */
+
+@media (min-width: 1366px) and (min-height: 1024px) {
+  /* for Ipad pro */
+  .hero {
+    min-height: 100vh;
+  }
+}
+@media (min-height: 1024px) and (min-height: 1366px) {
+  /* for ipad air landscape*/
+  .hero {
+    min-height: 60vh;
+  }
+}
 @media (min-width: 1030px) and (max-width: 1440px) {
+  /* for ipad air portrait */
   .expertise-card {
     margin: 25px;
   }
 }
+/* @media (min-width: 1024px) and (min-width: 768px){
+.glow-container{
+  min-height: 110vh;
+}
+} */
 @media (min-width: 1024px) and (max-width: 1025px) {
-  .glow-container {
+  /* .glow-container {
     min-height: 103vh;
+  } */
+  .glow-container {
+    min-height: 110vh;
   }
   #recognized {
     margin-top: 0px;
@@ -2330,8 +2352,22 @@ button.subscribe {
   }
   .logo-list__item > img {
     width: 80%;
-  width: calc(100vw / 6);
+    width: calc(100vw / 6);
+  }
+}
+@media only screen and (min-device-width: 820px) and (max-device-width: 834px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .recognized {
+    gap: 14px;
+  }
+  .hero {
+    min-height: 70vh;
+  }
+  /* 👉 iPad Air (Portrait) */
+}
 
+@media (min-width: 768px) and (min-height: 1024px) {
+  .hero {
+    min-height: 70vh;
   }
 }
 @media (max-width: 768px) {
@@ -2614,10 +2650,10 @@ button.subscribe {
     margin: 25px;
   }
   .hero {
-    min-height: 100vh;
+    max-height: 100vh;
   }
   .glow-container {
-    min-height: 100vh;
+    max-height: 100vh;
   }
   .loop-right {
     animation: infinity-scroll-left 20s infinite linear 0.5s both;
@@ -2774,15 +2810,18 @@ width: 10px;
 
 @media (min-height: 450px) {
   .hero {
-    min-height: 80vh;
+    max-height: 80vh;
   }
   .partner p {
-    font-size: 18px;
+    font-size: 18px !important;
+  }
+  .partner .partner_awarded {
+    margin-top: 20px;
   }
 }
 @media (min-height: 425px) {
   .hero {
-    min-height: 100vh;
+    max-height: 100vh;
   }
 }
 

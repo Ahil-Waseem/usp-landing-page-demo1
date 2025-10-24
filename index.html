@@ -549,11 +549,20 @@
             services helps brands grow with precision and purpose.
           </p>
         </div>
+          <!-- <div class="expertise-nav">
+          <button class="nav-btn2" id="slideLeft2">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+          <button class="nav-btn2" id="slideRight2">
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+         -->
 
         <div class="expertise-carousel-wrapper">
        
 
-          <div class="expertise-card-content owl-carousel">
+          <div class="expertise-card-content owl-carousel" id="expertiseSlider">
             <!-- Card 1 -->
             <div class="expertise-card">
               <div class="expertise-card-icon">
@@ -954,9 +963,9 @@
             </div>
           </div>
 
-          <button id="expertise-next" class="expertise-btn">
+          <!-- <button id="expertise-next" class="expertise-btn">
             <i class="las la-angle-right"></i>
-          </button>
+          </button> -->
         </div>
       </div>
     </div>
@@ -1620,7 +1629,7 @@
         return (direction = 1) => (min + delta * Math.random()) * direction;
       }
     </script>
-   <script>
+   <!-- <script>
 $(document).ready(function () {
   const $carousel = $(".expertise-card-content");
 
@@ -1674,6 +1683,50 @@ $(document).ready(function () {
   $carousel.on('mouseleave', function() {
     isPaused = false;
   });
+});
+</script> -->
+<!-- 
+<script>
+
+  $('.owl-carousel').owlCarousel({
+  
+    ltr: true,
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:3
+        }
+    },
+      
+})
+</script> -->
+
+<script>
+$('#expertiseSlider').owlCarousel({
+    loop: true,
+    margin: 30,
+    nav: true,
+    dots: false,
+    autoplay: true,
+    autoplayTimeout: 4000,
+    autoplayHoverPause: true,
+    responsive: {
+        0: { items: 1 },
+        768: { items: 2 },
+        1024: { items: 3 }
+    },
+    navText: [
+      '<i class="fas fa-arrow-left"></i>',
+      '<i class="fas fa-arrow-right"></i>'
+    ]
 });
 </script>
 
